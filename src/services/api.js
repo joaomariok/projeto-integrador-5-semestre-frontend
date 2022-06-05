@@ -1,9 +1,10 @@
 import axios from 'axios';
 
 const oldUrl = "http://localhost:3050/api"
+const herokuApiURl = 'https://projeto-integrador-5s-backend.herokuapp.com/'
 
 const api = axios.create({
-    baseURL: "http://localhost:5000",
+    baseURL: herokuApiURl,
 });
 
 export default api;
