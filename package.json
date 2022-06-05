@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "start": "npm install && vite build && vite preview",
+    "start": "node main.jsx",
     "serve": "vite preview"
   },
   "dependencies": {
