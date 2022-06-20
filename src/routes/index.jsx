@@ -5,7 +5,7 @@ import { OtherRoutes } from './OtherRoutes';
 import { useAuth } from '../contexts/auth';
 
 export function Routes() {
-    const { signed } = useAuth();
-
-    return signed ? <OtherRoutes /> : <SignInRoutes />;
+    // const { signed } = useAuth();
+    // return signed ? <OtherRoutes /> : <SignInRoutes />;
+    return <OtherRoutes />;
 };
