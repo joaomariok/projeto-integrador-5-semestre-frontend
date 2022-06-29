@@ -4,8 +4,8 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "serve": "vite preview",
-    "start": "vite --port $PORT --host"
+    "start": "vite --port $PORT --host",
+    "serve": "vite preview"
   },
   "dependencies": {
     "axios": "^0.24.0",
@@ -14,10 +14,13 @@
     "react-chartjs-2": "^3.3.0",
     "react-dom": "^17.0.0",
     "react-router-dom": "^5.3.0",
-    "sass": "^1.43.3"
+    "sass": "^1.43.3",
+    "@vitejs/plugin-react": "^1.0.0",
+    "vite": "^2.6.4"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.0",
-    "vite": "^2.6.4"
+    "vite": "^2.6.4",
+    "vitest": "^0.15.2"
   }
 }

@@ -6,6 +6,7 @@ import { GraficoHorasDeEspera } from '../components/GraficoHorasDeEspera';
 import { Header } from '../components/Header';
 
 import { Home } from '../pages/Home';
+import { Login } from '../pages/Login';
 
 export function OtherRoutes() {
     return (
@@ -13,6 +14,7 @@ export function OtherRoutes() {
             <BrowserRouter>
                 <Header />
                 <Route exact path="/" component={Home} />
+                <Route exact path="/login" component={Login} />
                 <Route exact path="/cadastro" component={Cadastro} />
                 <Route exact path="/grafico/horasdeespera" component={GraficoHorasDeEspera} />
                 <Route exact path="/grafico/permaneciaporgravidade" component={GraficoPermaneciaPorGravidade} />

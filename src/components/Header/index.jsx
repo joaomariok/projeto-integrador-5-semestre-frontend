@@ -4,12 +4,10 @@ import { useAuth } from "../../contexts/auth";
 
 import styles from './styles.module.scss'
 
-export function Header() {
-    const { Logout } = useAuth();
+import { LogInOutButton } from "../LogInOutButton";
 
-    async function handleLogout() {
-        Logout();
-    }
+export function Header() {
+    const { signed } = useAuth();
 
     return (
         <header className={styles.defaultHeader}>
@@ -17,21 +15,23 @@ export function Header() {
                 <Link to="/" className={styles.headerLogo}>Home</Link>
             </h1>
             <div className={styles.itemWrapper}>
-                <Link to="/cadastro" className={styles.headerItem}>
+                {signed && <Link to="/cadastro" className={styles.headerItem}>
                     Cadastro de novo paciente
-                </Link>
-                {/* <h2 className={styles.verticalSeparator}>|</h2> */}
-                <div className={styles.verticalSeparator} ></div>
+                </Link>}
+
+                {signed && <div className={styles.verticalSeparator} ></div>}
+
                 <Link to="/grafico/horasdeespera" className={styles.headerItem}>
                     Ocorrências por Faixa de permanência
                 </Link>
-                {/* <h2 className={styles.verticalSeparator}>|</h2> */}
+
                 <div className={styles.verticalSeparator} ></div>
+
                 <Link to="/grafico/permaneciaporgravidade" className={styles.headerItem}>
                     Permanência por Gravidade
                 </Link>
             </div>
-            <button onClick={handleLogout}>Logout</button>
+            <LogInOutButton />
         </header>
     );
 }
